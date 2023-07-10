@@ -1,5 +1,3 @@
-# Kieran Le
-
 from asyncore import read
 import math
 import tkinter as tk
@@ -27,9 +25,6 @@ def days_between(d1, d2):
     d2 = datetime.strptime(d2, "%Y-%m-%d")
     return abs((d2 - d1).days)
 
-# def openMainMenu(window):
-#     window.destroy()
-#     mainMenu()
 
 def deleteTex(text):
     text.delete('0', END)
@@ -651,15 +646,7 @@ def handleReturn():
         conn.commit()
         tkinter.messagebox.showinfo("OK", "Added successfully!")
     
-    # def findCust():
-    #     query = "SELECT CustID, Phone FROM CUSTOMER WHERE Name like %s"
-    #     searchName =  custNameEntry.get()
-    #     cur.execute( query, (searchName,))
-    #     foundCust = cur.fetchall()
-    #     for element in foundCust:
-    #         filledPhone.set( element[1] )
-    #         filledID.set( element[0] )
-            # filledCustID.set( element[0])
+
 
     # Create handle rental window, set its title and size
     handleReturnWindow = Tk()
@@ -1036,13 +1023,8 @@ def returnVehicleView():
 
     returnVehicleViewWindow.mainloop()
     
-#handleReturn()
-#addRental()
-#addNewCust()
-#addNewVehicle()
-#mainMenu()
+
 loginW()
-#addNewVehicle()
 
 cur.close()
 conn.close()
